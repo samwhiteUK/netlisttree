@@ -29,7 +29,7 @@ function! GetCurrentFileTree()
     let s:match = matchlist(line, '\s*\(\S*\) *: *entity *\(work\.\)\(.*\)')
     if (!empty(s:match))
       "echo s:match
-      call extend(b:subDict, {s:match[3] : s:match[1]})
+      call extend(b:subDict, {s:match[1] : s:match[3]})
     endif
   endfor
   echo b:subDict
